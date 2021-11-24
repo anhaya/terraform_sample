@@ -31,19 +31,17 @@ aws_secret_access_key = <secret key>
 * Mudar o valor da região AWS, esta como "us-east-1", se necessário, mude para a qual você irá utilizar
 * Mude o nome do bucket para o qual você criou acima, no código está como "carlosanhaya-terraform-backend-state"
 * No código o terraform state esta configurado para ser lido de conta de produção, se necessário, mude para a conta ao qual você deseja
-6. Criar workspaces conforme abaixo
-```python
-terraform workspace new dev
-terraform workspace new hml
-terraform workspace new prd
-```
+
 ## Deployment
 1. Iniciar os módulos
 ```python
 terraform init
 ```
-2. Selecionar workspace
+2. Criar/Selecionar workspace
 ```python
+terraform workspace new dev
+terraform workspace new hml
+terraform workspace new prd
 terraform workspace select dev
 ```
 3. Aplicar utilizando o respectivo arquivo de inicialização de variaveis
