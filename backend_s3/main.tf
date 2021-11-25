@@ -17,7 +17,7 @@ terraform {
     profile              = "account-prd"
     bucket               = "carlosanhaya-terraform-backend-state"
     workspace_key_prefix = "us-east-1"
-    key                  = "shared-infra"
+    key                  = "tfstate"
     region               = "us-east-1"
   }
 }

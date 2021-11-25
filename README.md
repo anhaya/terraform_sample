@@ -28,3 +28,6 @@ precisa automatizar a criação de um DynamoDB.
 
 3. Usar backend remoto com Terraform Cloud
 
+## Links
+https://www.terraform-best-practices.com/naming
+
