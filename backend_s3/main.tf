@@ -1,8 +1,3 @@
-provider "aws" {
-  region  = "us-east-1"
-  profile = "account-${terraform.workspace}"
-}
-
 terraform {
   required_version = ">= 0.15.4"
 
@@ -20,6 +15,11 @@ terraform {
     key                  = "tfstate"
     region               = "us-east-1"
   }
+}
+
+provider "aws" {
+  region  = "us-east-1"
+  profile = "account-${terraform.workspace}"
 }
 
 module "dynamodb" {
